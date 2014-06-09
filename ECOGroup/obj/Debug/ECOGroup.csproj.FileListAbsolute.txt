@@ -1,0 +1,11 @@
+F:\Suraj Work\ECOGroup\ECOGroup\bin\ECOGroup.dll
+F:\Suraj Work\ECOGroup\ECOGroup\bin\ECOGroup.pdb
+F:\Suraj Work\ECOGroup\ECOGroup\bin\EntityFramework.dll
+F:\Suraj Work\ECOGroup\ECOGroup\bin\EntityFramework.SqlServer.dll
+F:\Suraj Work\ECOGroup\ECOGroup\bin\MySql.Data.dll
+F:\Suraj Work\ECOGroup\ECOGroup\bin\MySql.Data.Entity.EF6.dll
+F:\Suraj Work\ECOGroup\ECOGroup\bin\EntityFramework.xml
+F:\Suraj Work\ECOGroup\ECOGroup\bin\EntityFramework.SqlServer.xml
+F:\Suraj Work\ECOGroup\ECOGroup\obj\Debug\ResolveAssemblyReference.cache
+F:\Suraj Work\ECOGroup\ECOGroup\obj\Debug\ECOGroup.dll
+F:\Suraj Work\ECOGroup\ECOGroup\obj\Debug\ECOGroup.pdb
