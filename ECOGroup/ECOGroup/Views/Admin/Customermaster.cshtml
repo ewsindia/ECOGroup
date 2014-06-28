@@ -1,0 +1,240 @@
+﻿@model ECOGroup.Models.customer_master
+
+@{
+    ViewBag.Title = "Customermaster";
+    Layout = "~/Views/Shared/Ecogroupmaster.cshtml";
+}
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+<link rel="stylesheet" type="text/css" href="../../Content/css/stylesheet.css">
+<link rel="stylesheet" type="text/css" href="../../Content/css/main.css">
+<link rel="stylesheet" href="../../Content/css/validationEngine.jquery.css" type="text/css">
+<link rel="stylesheet" href="../../Content/css/validation.css" type="text/css">
+<link type="text/css" href="../../Content/css/jquery-ui-1.css" rel="stylesheet">
+<link rel="stylesheet" href="../../Content/css/popup.css">
+
+<div class="box">
+<div class="heading">
+      <h1><img src="../../Content/image/user-group.png" alt="">Customer Detail</h1>
+      <div class="buttons"></div>
+    </div>
+<div class="content">
+<div id="searchdata">
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    
+      <table width = "50%" align="center">
+      <tr>
+       <td>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.fname)
+        </div>
+        </td>
+        <td>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.fname)
+            @Html.ValidationMessageFor(model => model.fname)
+        </div>
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.mname)
+        </div>
+        </td>
+        <td>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.mname)
+            @Html.ValidationMessageFor(model => model.mname)
+        </div>
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.lname)
+        </div>
+        </td>
+        <td>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.lname)
+            @Html.ValidationMessageFor(model => model.lname)
+        </div>
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.mobile)
+        </div>
+        </td>
+        <td>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.mobile)
+            @Html.ValidationMessageFor(model => model.mobile)
+        </div>
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.password)
+        </div>
+        </td>
+        <td>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.password)
+            @Html.ValidationMessageFor(model => model.password)
+        </div>
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.email)
+        </div>
+        </td>
+        <td>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.email)
+            @Html.ValidationMessageFor(model => model.email)
+        </div>
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.medicine_details)
+        </div>
+        </td>
+        <td>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.medicine_details)
+            @Html.ValidationMessageFor(model => model.medicine_details)
+        </div>
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.bdate)
+        </div>
+        </td>
+        <td>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.bdate)
+            @Html.ValidationMessageFor(model => model.bdate)
+        </div>
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.tal)
+        </div>
+        </td>
+        <td>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.tal)
+            @Html.ValidationMessageFor(model => model.tal)
+        </div>
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.dist)
+        </div>
+        </td>
+        <td>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.dist)
+            @Html.ValidationMessageFor(model => model.dist)
+        </div>
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Add1)
+        </div>
+        </td>
+        <td>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Add1)
+            @Html.ValidationMessageFor(model => model.Add1)
+        </div>
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.pin)
+        </div>
+        </td>
+        <td>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.pin)
+            @Html.ValidationMessageFor(model => model.pin)
+        </div>
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.isEmailVerified)
+        </div>
+        </td>
+        <td>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.isEmailVerified)
+            @Html.ValidationMessageFor(model => model.isEmailVerified)
+        </div>
+        </td>
+        </tr>
+        <tr>
+        <td>
+         <div class="editor-label">
+           Please select 
+        </div>
+        </td>
+        <td>
+        <div class="editor-field">
+            @Html.RadioButton("maritalstatus", "1")Reference Customer
+            <br />
+             @Html.RadioButton("maritalstatus", "2")Direct Shop
+            @Html.ValidationMessageFor(model => model.isMobileVerified)
+        </div>
+        <br />
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.isMobileVerified)
+        </div>
+        </td>
+        <td>
+        <div class="editor-field">
+            @Html.HiddenFor(model => model.isMobileVerified)
+            @Html.ValidationMessageFor(model => model.isMobileVerified)
+        </div>
+        </td>
+        </tr>
+        <tr>
+        <td>
+        </td>
+        <td>
+        <p>
+            <input class="sexybutton sexysimple" type="submit" value="save" />
+        </p>
+        </td>
+       </tr>
+       </table>
+}
+</div>
+</div>
+</div>

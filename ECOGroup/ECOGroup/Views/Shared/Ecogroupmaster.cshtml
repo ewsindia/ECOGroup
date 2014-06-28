@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@ViewBag.Titel Ecogroup</title>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+
+@*<script type="text/javascript" src="js/jquery-1.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.js"></script>
+<link type="text/css" href="css/jquery-ui-1.css" rel="stylesheet">
+<script type="text/javascript" src="js/tabs.js"></script>
+<script type="text/javascript" src="js/superfish.js"></script>*@
+
+<link rel="stylesheet" type="text/css" href="../../Content/css/stylesheet.css">
+
+<script type="text/javascript" src="../../Scripts/js/jquery-1.js"></script>
+<script type="text/javascript" src="../../Scripts/js/jquery-ui-1.js"></script>
+<link type="text/css" href="../../Content/css/jquery-ui-1.css" rel="stylesheet">
+<script type="text/javascript" src="../../Scripts/js/tabs.js"></script>
+<script type="text/javascript" src="../../Scripts/js/superfish.js"></script>
+
+
+</head>
+<body>
+<div id="header">
+ <div class="div1">
+    <div class="div2"><img src="../../Content/image/logo.png" title="Administration" onClick="location = '#'"></div>
+        <div class="div3"><img src="../../Content/image/lock.png" alt="" style="position: relative; top: 3px;">&nbsp;You are logged in as </div>
+      </div>
+ <div id="menu">
+
+	<ul class="left sf-js-enabled" style="display: block;">
+      <li id="dashboard" class="top">Dashboard</li>
+      <li id="catalog" class="top">Add New
+        <ul style="display: none; visibility: hidden;">
+          <!--<li><a href="Shop_master.php">Medical Shop</a></li>-->
+          <li>Customer</li>
+        </ul>
+      </li>
+      <li id="sale" class="top">Search & Edit
+        <ul style="display: none; visibility: hidden;">
+          <!--<li><a href="searchshope.php">Medical Shop</a></li>-->
+          <li>Customer</li>
+        </ul>
+      </li>
+      <li id="system" class="top">System
+        <ul style="display: none; visibility: hidden;">
+          <li>Set Discount</li>
+          <li>Change Password
+          <li>Users</li>
+          </li>
+        </ul>
+      </li>
+      <li id="reports" class="top">Reports
+        <ul style="display: none; visibility: hidden;">
+          <li>Sales
+            <ul style="display: none; visibility: hidden;">
+              <li>Daily</li>
+              <li>Montholy</li>
+              <li>Yearly</li>
+            </ul>
+          </li>
+          <li><a class="parent">Transection Details</a>
+            <ul style="display: none; visibility: hidden;">
+             <!-- <li><a href="#">Customer Purches</a></li>-->
+              <li>Customer Payment</li>
+            </ul>
+          </li>
+          <li><a class="parent">Security</a>
+            <ul style="display: none; visibility: hidden;">
+              <li>Unauthorised Access</li>
+            </ul>
+          </li>
+          <li>Shope Balance Sheet</li>
+        </ul>
+      </li>
+      <li id="help" class="top">Help
+        <ul style="display: none; visibility: hidden;">
+          <li>Homepage</li>
+          <li>Documentation</li>
+          <li>Support Forum</li>
+          search_shop_payment.php
+        </ul>
+      </li>
+    </ul>
+    <ul style="display: block;" class="right sf-js-enabled">
+      <li id="store" class="top">Website Home
+        <ul style="display: none; visibility: hidden;">
+       </ul>
+      </li>
+      <li id="store" class="top">Logout</li>
+    </ul>
+    
+</div>
+</div>
+    <div id="content">
+        @RenderBody()
+    </div>
+<div id="footer"> ECO Group © 20013-2014 All Rights Reserved <br>All Rights Reserved</div>
+</body>
+</html>
