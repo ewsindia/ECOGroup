@@ -52,30 +52,30 @@ namespace ECOGroup.Models
     //    public DateTime trans_date { get; set; }
     //}
 
-    //[Table("customer_master")]
-    //public class customer_master
-    //{
-    //    [Key]
-    //    public int custid { get; set; }
-    //    public string fname { get; set; }
-    //    public string mname { get; set; }
-    //    public string lname { get; set; }
-    //    public string mobile { get; set; }
-    //    public string password { get; set; }
-    //    public string email { get; set; }
-    //    public string medicine_details { get; set; }
-    //    public DateTime bdate { get; set; }
-    //    public string tal { get; set; }
-    //    public string dist { get; set; }
-    //    public string Add1 { get; set; }
-    //    public string Add2 { get; set; }
-    //    public int pin { get; set; }
-    //    public double discount_given { get; set; }
-    //    public double discount_paid { get; set; }
-    //    public int isActive { get; set; }
-    //    public int isEmailVerified { get; set; }
-    //    public int isMobileVerified { get; set; }
-    //}
+    [Table("customer_master")]
+    public class customer_master
+    {
+        [Key]
+        public int custid { get; set; }
+        public string fname { get; set; }
+        public string mname { get; set; }
+        public string lname { get; set; }
+        public string mobile { get; set; }
+        public string password { get; set; }
+        public string email { get; set; }
+        public string medicine_details { get; set; }
+        public DateTime bdate { get; set; }
+        public string tal { get; set; }
+        public string dist { get; set; }
+        public string Add1 { get; set; }
+        public string Add2 { get; set; }
+        public int pin { get; set; }
+        public double discount_given { get; set; }
+        public double discount_paid { get; set; }
+        public int isActive { get; set; }
+        public int isEmailVerified { get; set; }
+        public int isMobileVerified { get; set; }
+    }
 
     ////[Table("discounts")]
     ////public class discounts

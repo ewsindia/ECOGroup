@@ -218,7 +218,7 @@
         </td>
         </tr>
 
-        <tr>
+      @*  <tr>
         <td>
         <div class="editor-label">
             @Html.LabelFor(model => model.isEmailVerified)
@@ -255,16 +255,16 @@
         </td>
         <td>
         <div class="editor-field">
-           @* @Html.HiddenFor(model => model.isMobileVerified)
-            @Html.ValidationMessageFor(model => model.isMobileVerified)*@
+            @Html.HiddenFor(model => model.isMobileVerified)
+            @Html.ValidationMessageFor(model => model.isMobileVerified)
             
-                @*Other @Html.RadioButton("Other", false, new { id = "radioButton" })*@
+                Other @Html.RadioButton("Other", false, new { id = "radioButton" })
            
 
-               @* @Html.TextBoxFor(model => model.isMobileVerified, new { id = "otherTextbox" })*@
+                @Html.TextBoxFor(model => model.isMobileVerified, new { id = "otherTextbox" })
         </div>
         </td>
-        </tr>
+        </tr>*@
         <tr>
         <td>
         </td>

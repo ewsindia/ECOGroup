@@ -24,7 +24,7 @@ namespace ECOGroup
             routes.MapRoute(
                 "Default", // Route name
                 "{controller}/{action}/{id}", // URL with parameters
-                new { controller = "Admin", action = "Shopmasterinfo", id = UrlParameter.Optional } // Parameter defaults
+                new { controller = "Admin", action = "Customermaster", id = UrlParameter.Optional } // Parameter defaults
             );
 
         }
