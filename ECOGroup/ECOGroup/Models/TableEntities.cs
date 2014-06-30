@@ -315,5 +315,5 @@ namespace ECOGroup.Models
     //    public int isShop { get; set; }
     //    public DateTime vaildtill { get; set; }
     //}
-
+   
 }

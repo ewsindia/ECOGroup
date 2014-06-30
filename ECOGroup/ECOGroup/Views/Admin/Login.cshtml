@@ -1,0 +1,128 @@
+﻿@model ECOGroup.Models.LogIn
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@ViewBag.Titel Ecogroup</title>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+
+@*<script type="text/javascript" src="js/jquery-1.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.js"></script>
+<link type="text/css" href="css/jquery-ui-1.css" rel="stylesheet">
+<script type="text/javascript" src="js/tabs.js"></script>
+<script type="text/javascript" src="js/superfish.js"></script>*@
+
+<link rel="stylesheet" type="text/css" href="../../Content/css/stylesheet.css">
+
+<script type="text/javascript" src="../../Scripts/js/jquery-1.js"></script>
+<script type="text/javascript" src="../../Scripts/js/jquery-ui-1.js"></script>
+<link type="text/css" href="../../Content/css/jquery-ui-1.css" rel="stylesheet">
+<script type="text/javascript" src="../../Scripts/js/tabs.js"></script>
+<script type="text/javascript" src="../../Scripts/js/superfish.js"></script>
+
+<script>
+    function validate() {
+        var uid = $('#username').val(), pass = $('#password').val();
+        $.ajax({
+            type: "POST",
+            url: "validate.php",
+            data: { uid: uid, pass: pass },
+            contentType: "application/x-www-form-urlencoded;charset=UTF-8",
+            success: function (data) {
+                //...
+                var cnt = data.indexOf("<valid>1<valid>");
+                if (cnt > -1) {
+                    $(".warning").css("display", "none");
+                } else {
+                    $(".warning").css("display", "block");
+                }
+                //alert(cnt+" your image is saved!");
+
+            }
+        });
+    }
+</script>
+
+
+</head>
+<body>
+<div id="container">
+<div id="header">
+  <div class="div1">
+    <div class="div2"><img src="../../Content/image/logo.png" title="Administration" onClick="location = 'http://localhost/infosoft/upload/admin/index.php?route=common/login'"></div>
+      </div>
+  </div>
+<div id="content">
+  <div class="box" style="width: 400px; min-height: 300px; margin-top: 40px; margin-left: auto; margin-right: auto;">
+    <div class="heading">
+      <h1><img src="../../Content/image/lockscreen.png" alt=""> Please enter your login details.</h1>
+    </div>
+    <div class="content" style="min-height: 150px; overflow: hidden;">
+    <div class="warning" style="display:none">No match for Username and/or Password.</div>
+                 
+        @using (Html.BeginForm()) {
+        @Html.ValidationSummary(true)
+        <table style="width: 100%;">
+          <tbody>
+          
+          <tr>
+            <td style="text-align: center;" rowspan="4"><img src="../../Content/image/login.png" alt="Please enter your login details."></td>
+          </tr>
+          <tr>
+            <td><div class="editor-label">
+                @Html.LabelFor(model => model.username)
+            </div><br>
+             <div class="editor-field" id="username">
+                @Html.EditorFor(model => model.username)
+                @Html.ValidationMessageFor(model => model.username)
+            </div>
+              <br>
+              <br>
+               <div class="editor-label">
+                @Html.LabelFor(model => model.password)
+            </div><br>
+              <div class="editor-field" id="password">
+                @Html.EditorFor(model => model.password)
+                @Html.ValidationMessageFor(model => model.password)
+            </div>
+              <br>
+              <a href="">Forgotten Password</a>
+              </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td style="text-align: right;">
+            <a onClick="validate()" class="button">Login</a>
+           @*<input type="button" class="button" value="Login" />*@
+            </td>
+          </tr>
+        </tbody></table>
+             }
+             
+    </div>
+  </div>
+</div>
+<script type="text/javascript"><!--
+    $('#form input').keydown(function (e) {
+        if (e.keyCode == 13) {
+            validate();
+        }
+    });
+//--></script> 
+</div>
+<div id="footer"> Sai Medical © 20013-2014 All Rights Reserved <br>All Rights Reserved</div>
+</body>
+</html>
+
+
+
+
+
+

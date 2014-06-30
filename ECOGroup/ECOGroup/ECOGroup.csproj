@@ -220,6 +220,7 @@
     <Content Include="Views\Admin\Welcome.cshtml" />
     <Content Include="Views\Admin\Customermaster.cshtml" />
     <Content Include="Views\Admin\Shopmasterinfo.cshtml" />
+    <Content Include="Views\Admin\Login.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

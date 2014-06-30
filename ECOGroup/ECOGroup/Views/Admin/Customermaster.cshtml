@@ -1,4 +1,4 @@
-﻿@model ECOGroup.Models.customer_master
+﻿@model ECOGroup.Models.sai_customer_master
 
 @{
     ViewBag.Title = "Customermaster";
@@ -13,7 +13,43 @@
 <link rel="stylesheet" href="../../Content/css/validation.css" type="text/css">
 <link type="text/css" href="../../Content/css/jquery-ui-1.css" rel="stylesheet">
 <link rel="stylesheet" href="../../Content/css/popup.css">
+@*<script type="text/javascript">
 
+    $(document).ready(function () {
+        $("#otherTextbox").hide();
+         $('#radioButton').click(function()
+            {
+               if (this.checked == true)
+                 {
+                        $("#otherTextbox").show();
+                 }
+               else {
+                    $("#otherTextbox").hide();
+                    }
+                });
+</script>*@
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#otherTextbox").hide();
+
+        $("input:radio[name=isMobileVerified]").change(function () {
+            if (this.value == "Other") {
+                $("#otherTextbox").show();
+            }
+            else {
+                $("#otherTextbox").hide();
+            }
+
+        });
+
+        $("#otherTextbox").focusout(function () {
+            $("input:radio[name=isMobileVerified]:checked").attr('value', $("#otherTextbox").val());
+        });
+    });
+
+
+</script>
 <div class="box">
 <div class="heading">
       <h1><img src="../../Content/image/user-group.png" alt="">Customer Detail</h1>
@@ -111,7 +147,7 @@
         </td>
         <td>
         <div class="editor-field">
-            @Html.EditorFor(model => model.medicine_details)
+            @Html.ListBox("Medicin Details",((IEnumerable<SelectListItem>)ViewData["anyName"]))
             @Html.ValidationMessageFor(model => model.medicine_details)
         </div>
         </td>
@@ -203,9 +239,9 @@
         </td>
         <td>
         <div class="editor-field">
-            @Html.RadioButton("maritalstatus", "1")Reference Customer
+            @Html.RadioButton("Other", "1", new { id = "radio"})Reference Customer
             <br />
-             @Html.RadioButton("maritalstatus", "2")Direct Shop
+             @Html.RadioButton("Other", "2", new { id = "radio" })Direct Shop
             @Html.ValidationMessageFor(model => model.isMobileVerified)
         </div>
         <br />
@@ -219,8 +255,13 @@
         </td>
         <td>
         <div class="editor-field">
-            @Html.HiddenFor(model => model.isMobileVerified)
-            @Html.ValidationMessageFor(model => model.isMobileVerified)
+           @* @Html.HiddenFor(model => model.isMobileVerified)
+            @Html.ValidationMessageFor(model => model.isMobileVerified)*@
+            
+                @*Other @Html.RadioButton("Other", false, new { id = "radioButton" })*@
+           
+
+               @* @Html.TextBoxFor(model => model.isMobileVerified, new { id = "otherTextbox" })*@
         </div>
         </td>
         </tr>

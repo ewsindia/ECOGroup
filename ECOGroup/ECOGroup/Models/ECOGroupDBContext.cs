@@ -32,5 +32,7 @@ namespace ECOGroup.Models
         //public DbSet<sai_unauthorised_access> sai_unauthorised_access { get; set; }
         public DbSet<sai_users> sai_user { get; set; }
         //public DbSet<sai_verifier> sai_verifier { get; set; }
+
     }
+   
 }
